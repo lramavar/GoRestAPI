@@ -13,7 +13,7 @@ Unit Testing : JUnit 5
 
 Mocking Framework : Mockito 
 
-
+Used Postman to test GoRest API Calls and understand request and responses
 
 
 ## Sample Output : 
@@ -92,6 +92,11 @@ Nov 29, 2022 3:17:57 PM gorest.usermanagement.Application getUserById
 INFO: User Not Found ! 
  Request failed with response code : 404
  
- References Used : 
+ ## References : 
  1) https://rapidapi.com/blog/how-to-use-an-api-with-java/
- 2) https://www.javacodemonk.com/retrofit-oauth2-bearer-token-authentication-okhttp-android-3b702350
+ 2) https://www.twilio.com/blog/5-ways-to-make-http-requests-in-java
+ 3) https://square.github.io/retrofit/
+ 4) https://www.javacodemonk.com/retrofit-oauth2-bearer-token-authentication-okhttp-android-3b702350
+ 5) https://www.vogella.com/tutorials/JUnit/article.html
+ 6) https://mincong.io/2020/04/19/mockito-junit5/
+ 7) https://examples.javacodegeeks.com/core-java/util/logging/java-util-logging-example/
