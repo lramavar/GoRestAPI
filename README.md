@@ -91,3 +91,7 @@ INFO: 6 User with user id : 5918 was deleted.
 Nov 29, 2022 3:17:57 PM gorest.usermanagement.Application getUserById
 INFO: User Not Found ! 
  Request failed with response code : 404
+ 
+ References Used : 
+ 1) https://rapidapi.com/blog/how-to-use-an-api-with-java/
+ 2) https://www.javacodemonk.com/retrofit-oauth2-bearer-token-authentication-okhttp-android-3b702350
