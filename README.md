@@ -1,17 +1,25 @@
 # GoRestAPI
 A java application to connect to gorest api and perform action on users.
+
 IDE : IntelliJ 
+
 Framework : Maven project 
+
 HTTP Client used : Retrofit 
+
 Auth Type: OAuth Bearer token
+
 Unit Testing : JUnit 5
+
 Mocking Framework : Mockito 
 
 
 
 
-Sample Output : 
+## Sample Output : 
+
 1 : Page 3 list of users
+
 ID : 5923
  Name : Mrs. Suryakantam Iyengar
  Email : iyengar_mrs_suryakantam@harris-harber.biz
@@ -62,10 +70,13 @@ ID : 5909
  Email : chandra_verma@beahan-collins.name
  Gender : female
  Status : active
+ 
 Nov 29, 2022 3:17:55 PM gorest.usermanagement.Application getUserDetails
 INFO: 2 : Total Pages in response : 575
+
 Nov 29, 2022 3:17:55 PM gorest.usermanagement.Application main
 INFO: 4. Last user after sorting :Sarada Asan
+
 ID : 5918
  Name : Test User
  Email : sarada_asan@streich.info
@@ -73,8 +84,10 @@ ID : 5918
  Status : inactive
 Nov 29, 2022 3:17:56 PM gorest.usermanagement.Application updateUser
 INFO: 5 New updated user : Test User
+
 Nov 29, 2022 3:17:56 PM gorest.usermanagement.Application deleteUser
 INFO: 6 User with user id : 5918 was deleted.
+
 Nov 29, 2022 3:17:57 PM gorest.usermanagement.Application getUserById
 INFO: User Not Found ! 
  Request failed with response code : 404
