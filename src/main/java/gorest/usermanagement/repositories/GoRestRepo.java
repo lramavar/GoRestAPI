@@ -5,24 +5,24 @@ import com.google.gson.GsonBuilder;
 import gorest.usermanagement.clients.GoRestClient;
 import gorest.usermanagement.interceptors.OAuthInterceptor;
 import gorest.usermanagement.models.User;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public class GoRestRepo  {
 
-    static final String BASE_URL = "https://gorest.co.in";
-    public Gson gson;
-    public Retrofit retrofit;
+    private static final Logger LOGGER = Logger.getLogger(GoRestRepo.class.getName());
+    private static final String BASE_URL = "https://gorest.co.in";
+    private Gson gson;
+    private Retrofit retrofit;
 
-    public GoRestClient GRC;
+    private GoRestClient GRC;
 
      public GoRestRepo() {
           String token = "Bearer " + "4b9f93d630ba3b42684b77fff5612c81a80632712b51a596ebb39c5d13c8c8ed";
@@ -51,6 +51,8 @@ public class GoRestRepo  {
             Response<List<User>> res = call.execute();
             return res;
         } catch (Exception ex) {
+
+            LOGGER.log(Level.SEVERE,ex.toString());
             return null;
         }
     }
@@ -65,6 +67,7 @@ public class GoRestRepo  {
         }
         catch(Exception ex)
         {
+            LOGGER.log(Level.SEVERE,ex.toString());
             return null;
         }
     }
@@ -79,6 +82,7 @@ public class GoRestRepo  {
         }
         catch(Exception ex)
         {
+            LOGGER.log(Level.SEVERE,ex.toString());
             return null;
         }
     }
@@ -93,6 +97,7 @@ public class GoRestRepo  {
         }
         catch(Exception ex)
         {
+            LOGGER.log(Level.SEVERE,ex.toString());
             return null;
         }
     }

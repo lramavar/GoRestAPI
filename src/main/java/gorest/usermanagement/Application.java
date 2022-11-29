@@ -12,8 +12,12 @@ import java.util.logging.Logger;
 
 public class Application {
 
+    private GoRestRepo GRC;
     private static final Logger LOGGER = Logger.getLogger(Application.class.getName());
 
+    public Application(){
+         GRC = new GoRestRepo();
+    }
     public static void main(String[] args) {
 
         // Retrieve page 3 of the list of all users.
@@ -38,15 +42,15 @@ public class Application {
         // 6. Delete that updated user
         boolean isDeleted = app.deleteUser(updateUser);
 
-        // 7. Attempt to retrieve a nonexistent user with ID 5555. Log the resulting http response code.
+        // 7. Attempt to retrieve a nonexistent user . Log the resulting http response code.
 
-        User user5555 = app.getUserById(5555);
+         app.getUserById(updateUser.id);
 
     }
 
     public List<User> getUserDetails()
     {
-        GoRestRepo GRC = new GoRestRepo();
+
 
         Response<List<User>> response = GRC.getUsers(0);
 
@@ -70,7 +74,6 @@ public class Application {
 
     public User getUserById(int id)
     {
-        GoRestRepo GRC = new GoRestRepo();
 
         Response<User> response = GRC.getUserById(id);
 
@@ -93,8 +96,6 @@ public class Application {
         User newuser = user;
 
         newuser.name = name;
-
-        GoRestRepo GRC = new GoRestRepo();
 
         Response<User> response = GRC.updateUserById(user.id, newuser);
 
@@ -120,7 +121,6 @@ public class Application {
 
     public boolean deleteUser(User user)
     {
-        GoRestRepo GRC = new GoRestRepo();
 
         Response<User> response = GRC.deleteUserById(user.id);
 
